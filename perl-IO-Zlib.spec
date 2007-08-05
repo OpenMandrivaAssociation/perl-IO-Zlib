@@ -1,7 +1,7 @@
 %define real_name	IO-Zlib
 %define name		perl-%{real_name}
-%define version		1.04
-%define release		%mkrel 3
+%define version		1.07
+%define release		%mkrel 1
 
 Summary:	IO:: style interface to Compress::Zlib
 Name:		%{name}
@@ -44,16 +44,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorlib}/IO/*
 %{_mandir}/man?/*
-
-
-* Tue Jun 14 2005 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 1.04-2mdk
-- Rebuild
-
-* Thu Oct 14 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.04-1mdk
-- 1.04
-
-* Mon Aug 23 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.03-1mdk
-- 1.03
-
-* Wed Jun 30 2004 Olivier Thauvin <thauvin@aerov.jussieu.fr> 1.01-1mdk
-- first version of rpm.
