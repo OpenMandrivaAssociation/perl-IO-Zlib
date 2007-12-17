@@ -13,7 +13,6 @@ URL:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.gz
 BuildRequires:	perl-Compress-Zlib
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 IO::Zlib provides an IO:: style interface to Compress::Zlib and hence
