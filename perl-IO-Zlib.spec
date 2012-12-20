@@ -1,15 +1,15 @@
-%define upstream_name	 IO-Zlib
-%define upstream_version 1.10
+%define	module	IO-Zlib
+%define	modver	1.10
 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Name:		perl-%{module}
+Version:	%{perl_convert_version %{modver}}
+Release:	7
 
 Summary:	IO:: style interface to Compress::Zlib
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+URL:		http://search.cpan.org/dist/%{module}
+Source0:	http://www.cpan.org/modules/by-module/IO/%{module}-%{modver}.tar.gz
 
 BuildRequires:	perl(Compress::Zlib)
 BuildRequires:	perl-devel
@@ -21,14 +21,14 @@ to gzip/zlib compressed files. It provides many of the same methods as
 the IO::Handle interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="%{optflags}"
 
 %check
-%__make test
+make test
 
 %install
 %makeinstall_std
@@ -38,8 +38,10 @@ the IO::Handle interface.
 %{perl_vendorlib}/IO/*
 %{_mandir}/man?/*
 
-
 %changelog
+* Thu Dec 20 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.100.0-7
+- rebuild for new perl-5.16.2
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.100.0-5mdv2012.0
 + Revision: 765377
 - rebuilt for perl-5.14.2
