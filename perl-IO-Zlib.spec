@@ -4,7 +4,7 @@
 Summary:	IO:: style interface to Compress::Zlib
 Name:		perl-%{module}
 Version:	%{perl_convert_version %{modver}}
-Release:	11
+Release:	12
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
